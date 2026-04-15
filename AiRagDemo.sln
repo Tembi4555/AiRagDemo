@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiRagDemo.Domain", "src\AiRagDemo.Domain\AiRagDemo.Domain.csproj", "{83A46A99-B72B-443E-8C07-02BE21274526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiRagDemo.Api", "src\AiRagDemo.Api\AiRagDemo.Api.csproj", "{C6673173-03F8-4559-B7BA-9E32D85249D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiRagDemo.Application", "src\AiRagDemo.Application\AiRagDemo.Application.csproj", "{1E0F9A43-1970-492D-9347-802F31762387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiRagDemo.Infrastructure", "src\AiRagDemo.Infrastructure\AiRagDemo.Infrastructure.csproj", "{32E55BD1-F90D-4E93-A338-0C77DE6207C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83A46A99-B72B-443E-8C07-02BE21274526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A46A99-B72B-443E-8C07-02BE21274526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A46A99-B72B-443E-8C07-02BE21274526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A46A99-B72B-443E-8C07-02BE21274526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6673173-03F8-4559-B7BA-9E32D85249D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6673173-03F8-4559-B7BA-9E32D85249D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6673173-03F8-4559-B7BA-9E32D85249D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6673173-03F8-4559-B7BA-9E32D85249D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E0F9A43-1970-492D-9347-802F31762387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E0F9A43-1970-492D-9347-802F31762387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E0F9A43-1970-492D-9347-802F31762387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E0F9A43-1970-492D-9347-802F31762387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E55BD1-F90D-4E93-A338-0C77DE6207C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E55BD1-F90D-4E93-A338-0C77DE6207C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E55BD1-F90D-4E93-A338-0C77DE6207C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E55BD1-F90D-4E93-A338-0C77DE6207C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

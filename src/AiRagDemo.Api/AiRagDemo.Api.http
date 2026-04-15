@@ -1,0 +1,6 @@
+@AiRagDemo.Api_HostAddress = http://localhost:5257
+
+GET {{AiRagDemo.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
