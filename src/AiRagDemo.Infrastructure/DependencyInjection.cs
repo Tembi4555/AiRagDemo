@@ -1,7 +1,13 @@
 using AiRagDemo.Application.Abstractions.AI;
+using AiRagDemo.Application.Abstractions.Persistence;
+using AiRagDemo.Application.Abstractions.Search;
+using AiRagDemo.Application.Processing;
+using AiRagDemo.Application.Services;
 using AiRagDemo.Infrastructure.AI.Chats;
 using AiRagDemo.Infrastructure.AI.Embeddings;
 using AiRagDemo.Infrastructure.Options;
+using AiRagDemo.Infrastructure.Persistence;
+using AiRagDemo.Infrastructure.VectorSearch;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -36,10 +42,12 @@ public static class DependencyInjection
             var optsOllama = sp.GetRequiredService<IOptions<OllamaPhi3Options>>().Value;
             client.BaseAddress = new Uri(optsOllama.BaseUrl);
         });
-        
-        //services.AddScoped<IEmbeddingService, OllamaEmbeddingService>();
-        //services.AddScoped<IChatService, OllamaChatService>();
 
+        services.AddSingleton<IChunkRepository, InMemoryChunkRepository>();
+        services.AddScoped<IVectorSearchService, InMemoryVectorSearchService>();
+        services.AddSingleton<TextChunker>();
+        services.AddScoped<RagService>();
+        
         return services;
     }
 }
