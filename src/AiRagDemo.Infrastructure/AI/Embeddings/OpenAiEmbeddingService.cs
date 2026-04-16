@@ -4,14 +4,14 @@ using System.Text.Json.Serialization;
 using AiRagDemo.Application.Abstractions.AI;
 using AiRagDemo.Infrastructure.Options;
 
-namespace AiRagDemo.Infrastructure.AI.OpenAI;
+namespace AiRagDemo.Infrastructure.AI.Embeddings;
 
 public sealed class OpenAiEmbeddingService : IEmbeddingService
 {
-    private readonly AiApiOptions _options;
+    private readonly OpenAiOptions _options;
     private readonly HttpClient _httpClient;
 
-    public OpenAiEmbeddingService(HttpClient httpClient, AiApiOptions options)
+    public OpenAiEmbeddingService(HttpClient httpClient, OpenAiOptions options)
     {
         _httpClient = httpClient;
         _options = options;

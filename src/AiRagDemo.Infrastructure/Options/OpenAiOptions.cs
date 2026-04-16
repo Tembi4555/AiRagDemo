@@ -1,6 +1,6 @@
 ﻿namespace AiRagDemo.Infrastructure.Options;
 
-public sealed class AiApiOptions
+public sealed class OpenAiOptions
 {
     public string ApiKey { get; init; } = string.Empty;
     public string BaseUrl { get; init; } = "https://api.openai.com/";
