@@ -25,20 +25,20 @@ public static class DependencyInjection
                 "Ollama phi3 local url is not valid")
             .ValidateOnStart();
         
-        services.AddHttpClient<OllamaEmbeddingService>((sp, client) =>
+        services.AddHttpClient<IEmbeddingService, OllamaEmbeddingService>((sp, client) =>
         {
             var optsOllama = sp.GetRequiredService<IOptions<OllamaPhi3Options>>().Value;
             client.BaseAddress = new Uri(optsOllama.BaseUrl);
         });
         
-        services.AddHttpClient<OllamaChatService>((sp, client) =>
+        services.AddHttpClient<IChatService, OllamaChatService>((sp, client) =>
         {
             var optsOllama = sp.GetRequiredService<IOptions<OllamaPhi3Options>>().Value;
             client.BaseAddress = new Uri(optsOllama.BaseUrl);
         });
         
-        services.AddScoped<IEmbeddingService, OllamaEmbeddingService>();
-        services.AddScoped<IChatService, OllamaChatService>();
+        //services.AddScoped<IEmbeddingService, OllamaEmbeddingService>();
+        //services.AddScoped<IChatService, OllamaChatService>();
 
         return services;
     }
